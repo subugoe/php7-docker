@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y libmagickwand-dev imagemagick php-imagi
 
 COPY www.conf /etc/php/7.0/fpm/pool.d/www.conf
 COPY php-fpm.conf /etc/php/7.0/fpm/php-fpm.conf
+COPY overrides.conf /etc/php/7.0/fpm/pool.d/z-overrides.conf
 
 EXPOSE 9000
 
